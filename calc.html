@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+  	<link rel="stylesheet" href="css/style_calcu.css">
+
+    <style>
+      table {
+        width: 100%;
+        text-align: center;
+      }
+      td {
+      }
+      .batton td {
+        text-align: center;
+        border-radius: 10px;
+        background: linear-gradient(to top right, #9aa3a9, #eaedf0);
+        padding: 11px 8px 8px 8px;
+      }
+      .product:hover  {
+        cursor: pointer;
+       
+      }
+
+
+      .row div {
+        margin: 34px 0;
+      }
+
+
+
+    </style>
+  </head>
+  <body>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+
+    <div class="calculator">
+      <form name="calcu">
+        <table class="table" >
+          <tr>
+            <td colspan="8" class="named" style="text-align: center;">
+              <h1>
+              Калькулятор<br>Металла
+            </h1>
+            </td>
+          </tr>
+          <tr class="material">
+            <td colspan="2">
+              <span>Материал:</span>
+            </td>
+            <td colspan="6" style="padding-right: 20px;">
+              <select id="material" name="material">
+              <option value="steel" selected>Углеродистая сталь</option>
+              <option value="chugun" >Чугун</option>
+              <option value="aluminium" >Алюминий</option>
+              <option value="bronze" >Бронза</option>
+              <option value="brass" >Латунь</option>
+              <option value="magnessium" >Магний</option>
+              <option value="cuprum" >Медь</option>
+              <option value="nickel" >Никель</option>
+              <option value="tin" >Олово</option>
+              <option value="plumbum" >Свинец</option>
+              <option value="titanium" >Титан</option>
+              <option value="zinc" >Цинк</option>
+            </select>
+            </td>
+          </tr>
+          <tr>
+            <td colspan="4" >
+              <table class="batton" style="border-spacing: 15px; ">
+              <tr>
+                <td class="product" id="corner" style="background: linear-gradient(to top, #bb0000, #f09a9a);">
+                  <img src="img/1_0.png">
+                </td>
+                <td class="product" id="sheet">
+                  <img src="img/2_1.png">
+                </td>
+              </tr >
+              <tr >
+                <td class="product" id="pipe">
+                  <img src="img/3_1.png">
+                </td>
+                <td class="product" id="circle">
+                  <img src="img/4_1.png">
+                </td>
+              </tr>
+              <tr>
+                <td class="product" id="pipe_prof">
+                  <img src="img/5_1.png">
+                </td>
+                <td class="product" id="square">
+                  <img src="img/6_1.png">
+                </td>
+              </tr>
+              <tr>
+                <td class="product" id="channel">
+                  <img src="img/7_1.png">
+                </td>
+                <td class="product" id="strip">
+                  <img src="img/8_1.png">
+                </td>
+              </tr>
+              <tr>
+                <td class="product" id="balk">
+                  <img src="img/9_1.png">
+                </td>
+                <td class="product" id="hexahedron">
+                <img src="img/10_1.png">
+                </td>
+              </tr>
+              </table>
+            </td>
+            <td colspan="4" valign="top" id="field">
+              <div class="row">
+                <div>
+                  <span><input type="text" placeholder="Высота" name="height">&nbsp;мм</span>
+                </div>
+                
+                <div>
+                  <span><input type="text" placeholder="Толщ. стенки" name="tolst">&nbsp;мм</span>
+                </div>
+                <div class="output">
+                <div class="lenght">
+                  <span><input type="text" placeholder="Длина" name='lenght'>&nbsp;м</span>
+                </div>
+                <div class="weight">
+                  <span><input type="text" placeholder="Вес" name="weight">&nbsp;кг</span>
+                </div>
+                </div>
+              </div>
+            </td>
+          </tr>
+          <tr>
+            <td colspan="8" class="newbutt" style="text-align: center;">
+              <h3><input type="button" value="РАССЧИТАТЬ" onclick="calculation(calcu)"></h3>
+            </td>
+          </tr>
+        </table>
+      </form>
+    </div>
+
+    <script type="text/javascript" src="js/calc.js"></script>
+  </body>
+</html>
+
+
+

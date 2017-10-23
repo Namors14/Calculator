@@ -1,0 +1,78 @@
+.calculator {
+	background: #eeeeee;
+	width: 450px;
+	padding:10px;
+	
+}
+input[type="text"] {
+  margin: 0;
+  width: 80%;
+  font-size: 18px;
+  appearance: none;
+  box-shadow: none;
+  border-radius: none;
+}
+input[type="text"]:focus {
+  outline: none;
+}
+.named h1 {
+	color: #333333;
+	font-family: 'Open Sans', sans-serif;
+	text-transform: uppercase;
+}
+.material span{
+	color: #333333;
+	font-family: 'Open Sans', sans-serif;
+}
+.material {
+	margin: 0px 0px 15px 0px;
+}
+.material select {
+	width: 100%;
+}
+.newbutt input {
+	width: 80%;
+	background-color: #777777;
+	border: none;
+	height: 50px;
+	border-radius: 10px;
+	color: #ffffff;	
+	font-size: 20px;
+
+}
+.batton img {
+	width: 40px;
+	height: 40px;
+}
+
+select 
+{        
+    @extend %inline-block;
+    @include gradient(#fff, #ececec, $toogler_img_url);
+    @include experimental('appearance', none, webkit, moz, not o, not ms, not khtml);
+
+    position: relative;
+    overflow: hidden;
+    white-space: nowrap;
+    margin: 0;
+    outline: none;
+    background-repeat: no-repeat;
+    background-position: 100% 50%;
+    padding: 6px;
+    padding-right: 24px;
+
+    &::-ms-expand { display: none; }
+
+    text-indent: 0.01px;
+    text-overflow: '';
+  
+    @include transition(border 0.2s ease-in);
+    @include text-shadow(0 1px 0 #fff);
+    @include border-radius(2px);
+    @include box-shadow(inset 0 1px 2px rgba(255, 255, 255, 0.3), 0 1px 2px rgba(0, 0, 0, 0.4));
+    cursor: pointer;
+    font: normal 14px/22px Arial,sans-serif;
+    border: 1px solid #ccc;
+    &:hover { border-color: darken(#ccc, 20%); }
+    &:focus { border-color: #0061a7; }
+}
